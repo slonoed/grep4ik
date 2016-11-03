@@ -46,7 +46,7 @@
                (when truncated? (recur next-marker))))
     ch))
 
-(defn add-browser! [{b :browser}VK]
+(defn add-browser! [{b :browser}]
   (swap! browsers (fn [bs]
                     (update bs
                             (str (:family b) " " (:major b))
